@@ -20,6 +20,11 @@ class VotesController < ApplicationController
       render :done
       return
     end
+    unless @poll.open?
+      render :closed
+      return
+    end
+
     if @vote.save
       ResultsChannel.broadcast_to(@poll, @poll.results)
       cookies["poll-#{@poll.id}"] = 'voted'
