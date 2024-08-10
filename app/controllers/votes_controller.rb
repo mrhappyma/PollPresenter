@@ -34,6 +34,11 @@ class VotesController < ApplicationController
     end
   end
 
+  def pie
+    @poll = Poll.find(params[:id])
+    @results = @poll.results
+  end
+
   def results
     @poll = Poll.find(params[:id])
     @results = @poll.results

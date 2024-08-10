@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :votes, only: %i[create]
     member do
       get "/vote" => "votes#new"
+      get "/pie" => "votes#pie"
       get "/results" => "votes#results"
     end
   end

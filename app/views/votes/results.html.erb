@@ -1,16 +1,30 @@
 <script type="module">
-    import "chartkick"
-    import "Chart.bundle"
-    import { createConsumer } from "@rails/actioncable"
+  import {createConsumer} from "@rails/actioncable"
 
     const consumer = createConsumer()
 
+    let results = <%= @results.to_json.html_safe %>
     consumer.subscriptions.create({ channel: "ResultsChannel",  poll_id: <%= @poll.id %>}, {
         received(data) {
-            const chart = Chartkick.charts.chart
-            chart.updateData(data);
+            results = data
+            updateResults();
         }
+    })
+
+    const updateResults = () => {
+        results = Object.fromEntries(Object.entries(results).sort((a, b) => b[1] - a[1]))
+        const resultsDiv = document.getElementById('results')
+        resultsDiv.innerHTML = ''
+        for (const [key, value] of Object.entries(results)) {
+            const resultDiv = document.createElement('div')
+            resultDiv.innerHTML = `${key}: ${value}`
+            resultsDiv.appendChild(resultDiv)
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateResults()
     })
 </script>
 
-<%= pie_chart @results, id: "chart", height: "98vh", width: "100%", colors: ["#9e0059", "#d9147b", "#f099bb", "#f24ba1", "#ffdbf3", "#be004f", "#721c19", "#a0138e"] %>
+<div id="results"></div>

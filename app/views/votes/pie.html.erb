@@ -1,0 +1,16 @@
+<script type="module">
+    import "chartkick"
+    import "Chart.bundle"
+    import { createConsumer } from "@rails/actioncable"
+
+    const consumer = createConsumer()
+
+    consumer.subscriptions.create({ channel: "ResultsChannel",  poll_id: <%= @poll.id %>}, {
+        received(data) {
+            const chart = Chartkick.charts.chart
+            chart.updateData(data);
+        }
+    })
+</script>
+
+<%= pie_chart @results, id: "chart", height: "98vh", width: "100%", colors: ["#9e0059", "#d9147b", "#f099bb", "#f24ba1", "#ffdbf3", "#be004f", "#721c19", "#a0138e"] %>
