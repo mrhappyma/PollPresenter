@@ -1,0 +1,18 @@
+<%= link_to 'new poll', new_poll_url %>
+
+<table>
+  <thead>
+  <th>id</th>
+  <th>name</th>
+  <th>open</th>
+  </thead>
+  <tbody>
+  <% @polls.each do |poll| %>
+    <tr>
+      <td><%= poll.id %></td>
+      <td><%= link_to poll.name, edit_poll_url(poll) %></td>
+      <td><%= poll.open %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

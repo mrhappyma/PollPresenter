@@ -1,0 +1,20 @@
+<%= form_for poll do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= error_messages_for poll, :name %>
+  </div>
+  <div>
+    <%= f.label "newline-seperated options" %> <br />
+    <!-- seperate options with newlines -->
+    <%= f.text_area :options, value: poll.options.join("\n") %>
+    <%= error_messages_for poll, :options %>
+  </div>
+  <div>
+    <%= f.label :open %>
+    <!-- switch on/off -->
+    <%= f.check_box :open %>
+    <%= error_messages_for poll, :open %>
+  </div>
+  <%= f.submit %>
+<% end %>
