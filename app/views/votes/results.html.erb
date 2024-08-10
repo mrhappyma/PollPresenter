@@ -22,9 +22,13 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+      updateResults()
+  })
+    if (document.readyState === 'complete') {
         updateResults()
-    })
+    }
+
 </script>
 
 <div id="r"></div>
