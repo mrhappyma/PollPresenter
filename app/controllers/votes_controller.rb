@@ -14,7 +14,7 @@ class VotesController < ApplicationController
   end
 
   def create
-    @poll = Poll.find(params[:poll_id])
+    @poll = Poll.find(params[:id])
     @vote = @poll.votes.new(vote_params)
     if cookies["poll-#{@poll.id}"] == 'voted'
       render :done

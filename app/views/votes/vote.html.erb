@@ -1,7 +1,6 @@
 <h1><%= @poll.name %></h1>
 
-<%= form_for @vote, url: "/polls/#{@poll.id}/votes" do |f| %>
-  <%= f.hidden_field :poll_id %>
+<%= form_for @vote, url: "/vote/#{@poll.id}" do |f| %>
   <% @poll.options.each do |option| %>
     <%= f.radio_button :vote, option %>
     <%= option %><br>
