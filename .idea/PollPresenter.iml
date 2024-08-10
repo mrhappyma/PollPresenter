@@ -710,6 +710,43 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="chartkick (v5.0.7) [path][gem]" type="rubylib">
+        <properties>
+          <option name="additionalInfo">
+            <AdditionalInfo>
+              <option name="authors" value="N/A" />
+              <option name="email" value="N/A" />
+              <option name="homepage" value="N/A" />
+              <option name="summary" value="N/A" />
+            </AdditionalInfo>
+          </option>
+          <option name="fromPath" value="true" />
+          <option name="name" value="chartkick" />
+          <option name="requirePaths">
+            <list>
+              <option value="lib" />
+            </list>
+          </option>
+          <option name="url" value="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7" />
+          <option name="version" value="5.0.7" />
+        </properties>
+        <CLASSES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/lib" />
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/vendor" />
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/licenses" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/lib" />
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/vendor" />
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/licenses" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/chartkick-5.0.7/licenses" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="concurrent-ruby (v1.3.3) [path][gem]" type="rubylib">
         <properties>
           <option name="additionalInfo">

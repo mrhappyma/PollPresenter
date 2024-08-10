@@ -33,12 +33,6 @@ class PollsController < ApplicationController
     end
   end
 
-  def destroy
-    @poll = Poll.find(params[:id])
-    @poll.destroy
-    redirect_to polls_url
-  end
-
   private
   def poll_params
     params.require(:poll).permit(:name, :options, :open)

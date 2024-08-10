@@ -37,6 +37,8 @@ gem "jbuilder"
 
 gem "json"
 
+gem "chartkick"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 

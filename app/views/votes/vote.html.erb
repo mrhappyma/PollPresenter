@@ -1,0 +1,11 @@
+<h1><%= @poll.name %></h1>
+
+<%= form_for @vote, url: "/polls/#{@poll.id}/votes" do |f| %>
+  <%= f.hidden_field :poll_id %>
+  <% @poll.options.each do |option| %>
+    <%= f.radio_button :vote, option %>
+    <%= option %><br>
+  <% end %>
+  <%= error_messages_for @vote, :vote %>
+  <%= f.submit "Vote" %>
+<% end %>

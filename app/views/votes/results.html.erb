@@ -1,0 +1,35 @@
+<script type="module">
+    import "chartkick"
+    import "Chart.bundle"
+    import { createConsumer } from "@rails/actioncable"
+
+    let results = <%= @results.to_json.html_safe %>
+
+    const consumer = createConsumer()
+    consumer.subscriptions.create({ channel: "ResultsChannel",  poll_id: <%= @poll.id %>}, {
+        received(data) {
+            results = data
+            updateChart()
+        }
+    })
+
+    function updateChart() {
+        new Chartkick.PieChart("chart", results)
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        updateChart()
+    })
+</script>
+
+<!--center the chart and expand to page height and width-->
+<style>
+    #chart {
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+    }
+
+</style>
+
+<div id="chart"></div>

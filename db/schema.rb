@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_09_231035) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_10_010223) do
   create_table "polls", force: :cascade do |t|
     t.string "name"
     t.boolean "open"
@@ -19,4 +19,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_09_231035) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "votes", force: :cascade do |t|
+    t.integer "poll_id", null: false
+    t.string "vote"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["poll_id"], name: "index_votes_on_poll_id"
+  end
+
+  add_foreign_key "votes", "polls"
 end
