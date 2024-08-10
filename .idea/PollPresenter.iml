@@ -2307,6 +2307,66 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="redis (v5.2.0) [path][gem]" type="rubylib">
+        <properties>
+          <option name="additionalInfo">
+            <AdditionalInfo>
+              <option name="authors" value="N/A" />
+              <option name="email" value="N/A" />
+              <option name="homepage" value="N/A" />
+              <option name="summary" value="N/A" />
+            </AdditionalInfo>
+          </option>
+          <option name="fromPath" value="true" />
+          <option name="name" value="redis" />
+          <option name="requirePaths">
+            <list>
+              <option value="lib" />
+            </list>
+          </option>
+          <option name="url" value="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-5.2.0" />
+          <option name="version" value="5.2.0" />
+        </properties>
+        <CLASSES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-5.2.0/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-5.2.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="redis-client (v0.22.2) [path][gem]" type="rubylib">
+        <properties>
+          <option name="additionalInfo">
+            <AdditionalInfo>
+              <option name="authors" value="N/A" />
+              <option name="email" value="N/A" />
+              <option name="homepage" value="N/A" />
+              <option name="summary" value="N/A" />
+            </AdditionalInfo>
+          </option>
+          <option name="fromPath" value="true" />
+          <option name="name" value="redis-client" />
+          <option name="requirePaths">
+            <list>
+              <option value="lib" />
+            </list>
+          </option>
+          <option name="url" value="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-client-0.22.2" />
+          <option name="version" value="0.22.2" />
+        </properties>
+        <CLASSES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-client-0.22.2/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/.gems_cache/ruby/3.0.0/gems/redis-client-0.22.2/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="regexp_parser (v2.9.2) [path][gem]" type="rubylib">
         <properties>
           <option name="additionalInfo">

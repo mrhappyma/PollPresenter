@@ -17,7 +17,7 @@
         resultsDiv.innerHTML = ''
         for (const [key, value] of Object.entries(results)) {
             const resultDiv = document.createElement('div')
-            resultDiv.innerHTML = `${key}: ${value}`
+            resultDiv.innerHTML = `${key}: ${value} votes`
             resultsDiv.appendChild(resultDiv)
         }
     }
