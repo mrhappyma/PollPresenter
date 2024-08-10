@@ -13,7 +13,7 @@
 
     const updateResults = () => {
         results = Object.fromEntries(Object.entries(results).sort((a, b) => b[1] - a[1]))
-        const resultsDiv = document.getElementById('results')
+        const resultsDiv = document.getElementById('r')
         resultsDiv.innerHTML = ''
         for (const [key, value] of Object.entries(results)) {
             const resultDiv = document.createElement('div')
@@ -27,4 +27,4 @@
     })
 </script>
 
-<div id="results"></div>
+<div id="r"></div>
