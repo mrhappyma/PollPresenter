@@ -1,3 +1,9 @@
+<style>
+  body {
+      background-color: <%= @poll.color %>
+  }
+</style>
+
 <%= render "polls/form", poll: @poll %>
 <br>
 <%= link_to 'Back', polls_path %>

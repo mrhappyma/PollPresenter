@@ -16,5 +16,10 @@
     <%= f.check_box :open %>
     <%= error_messages_for poll, :open %>
   </div>
+  <div>
+    <%= f.label :color %>
+    <%= f.color_field :color %>
+    <%= error_messages_for poll, :color %>
+  </div>
   <%= f.submit %>
 <% end %>

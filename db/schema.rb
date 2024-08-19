@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_10_010223) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_19_231445) do
   create_table "polls", force: :cascade do |t|
     t.string "name"
     t.boolean "open"
     t.text "options", default: "--- []\n"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "color", default: "#ffdbf3"
   end
 
   create_table "votes", force: :cascade do |t|
